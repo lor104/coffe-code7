@@ -17,3 +17,16 @@ def music(array)
 end
 
 print music([["row", 3], ["your", 1], ["boat", 1]])
+
+
+def sing(words)
+  song = []
+  words.each do |word, number|
+    number.times do
+      song << word
+    end
+  end
+  return song.join(' ')
+end
+
+print sing([["row", 3], ["your", 1], ["boat", 1]])
