@@ -16,6 +16,7 @@ def calc(num)
   digits = num.to_s.length
   each_num = num.to_s.split(//)
   total = 0
+
   each_num.each do |number|
     total += number.to_i ** digits
   end
@@ -30,3 +31,14 @@ end
 print calc(153)
 print calc(1634)
 print calc(281375)
+print calc(1)
+
+
+def narcissistic(number)
+  digits = number.to_s.length
+  number_sum = 0
+  number.to_s.split('').map do |digit|
+    number_sum += digit.to_i ** digits
+  end
+  number_sum == number
+end
